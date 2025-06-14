@@ -87,8 +87,18 @@ let logDetailsCI = document.getElementById("detailsCI").innerText;
 let logDateCI = document.getElementById("dateCI").innerText;
 let totalLogCI = logDetailsCI + " " +  logDateCI;
 
+let existingLogs = JSON.parse(localStorage.getItem("transactionLogs")) || [];
+/* "localStorage.getItem("transactionLogs")" bali tinitignan muna kung merong existing na na array para sa logs
+JSON.parse = para syang parse.float kung san ung string ibabalik niya to object form 
+JSON.stringify = pang convert ng mga object sa string para pwede sila sa localStorage
+ || [] = para siyang "else" na kapag ka wala pang value or wala pang existing array, gagawa or gamit nalang ng new array
+ */
+
+existingLogs.push(totalLogCI); //yung latest na value ng totalLogCI "pinupush" or dinadagdag sa array //
+localStorage.setItem("transactionLogs",JSON.stringify(existingLogs)); // sinesave ung details sa browser //
 
 }
+
 else {
     document.getElementById("changeCI").style.textAlign = "center";
     document.getElementById("changeCI").innerHTML = "Make sure the transaction is valid before confirming.";
