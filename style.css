@@ -133,3 +133,8 @@ font-weight: bold;
 font-family: Arial;
 font-size: large;
 }
+
+#transactionHistory ul, li {
+font-family: Arial;
+font-size: smaller;
+}
