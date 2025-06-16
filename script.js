@@ -1,12 +1,21 @@
 
-
-
 document.getElementById("trackTransaction").style.display ="flex";
 document.getElementById("overlayTransac").style.display ="none"; //change this to "none" later //
 
 document.getElementById("dropdownBtn").addEventListener("click", menu);
 
+function autoResetLogs() {
+const today = new Date().toDateString();
+const lastReset = localStorage.getItem("lastResetDate");
+
+if (lastReset !== today) {
+localStorage.setItem("transactionLogs", JSON.stringify([]));
+localStorage.setItem("lastResetDate", today);
+}}
+
 function menu() {const choices = document.getElementById("containerMenu");
+
+
 
 if (choices.style.display === "flex"){
     choices.style.display = "none";
@@ -72,4 +81,4 @@ logs.forEach(log => {
 
  }
 
-
+autoResetLogs();
