@@ -77,9 +77,31 @@ font-family: Arial;
 
 #cashOutBox label {
 font-family: Arial;
-font-size: large;
+font-size: small;
 margin: 0 15px 0 15px;
+}
 
+#cashOutBox input {
+margin: 0 5px 0 10px;
+padding: 10px;
+border: solid black ;
+border-radius: 12px;
+}
 
+#cashOutBox button {
+box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
+background-color: yellow;
+font-family: Arial;
+font-weight: bold;
+padding: 10px 20px;
+border-radius: 12px;
+border: solid black;
+}
 
+#cashOutBox button:active{
+box-shadow: none;
+}
+
+p {
+font-weight: bold;
 }
