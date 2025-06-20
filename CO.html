@@ -18,15 +18,16 @@ initial-scale=1.0">
             <label id="rneeLabel"> <input type="checkbox" onclick="validate(event)" id="rneeCO">Rnee S.</label>
             <label id="lizaLabel"> <input type="checkbox" onclick="validate(event)" id="lizaCO">Liza S.</label>
             
-            <p> Amount:</p>
+            <p id="amountDisplay"> Amount:</p>
             <input type="number" placeholder="Type Amount..." id="amountInputCO" autocomplete="off">
             <button onclick="amountCO()" id="amountCSS"> Enter</button>
-            <p>Given Charge: optional*</p>
+            <p id=" chrageDisplay">Given Charge: optional*</p>
             <input type="number" placeholder="Type Charge fee given..." id="chargeInputCO" autocomplete="off">
             <button onclick="chargeCO()" id="chargeCSS" >Enter</button>
             <p id="totalCO">Total:</p>
          
         </div> 
+        <button id="confirmCO">confirm details</button>
 
         </div>
 

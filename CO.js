@@ -7,7 +7,10 @@ let checkerCO = 0; // if 0 wala if 1 rnee if 2 liza //
 
 
 function amountCO () {
-amountValueCO = document.getElementById("amountInputCO").value;
+amountValueCO = Number(document.getElementById("amountInputCO").value);
+let transacChargeCO = Math.ceil(amountValueCO /500)*5;
+document.getElementById("amountDisplay").innerHTML = "Amount: " + "Php " + amountValueCO + ".00" + " ( " + transacChargeCO + " Charge)";
+document.getElementById("chargeInputCO").focus();
 computeTotalCO();
 }
 
@@ -17,7 +20,7 @@ if (event.key === "Enter" ) { amountCO();
 });
 
 function chargeCO () {
-chargeValueCO = document.getElementById("chargeInputCO").value;
+chargeValueCO = Number(document.getElementById("chargeInputCO").value);
 computeTotalCO();
 }
 
@@ -27,12 +30,24 @@ if (event.key === "Enter" ) { chargeCO();
 });
 
 function computeTotalCO() {
-let transacChargeCO = Math.ceil(amountValueCO /500)*5;
+
+transacChargeCO = Math.ceil(amountValueCO /500)*5;
 if (amountValueCO > 0 && chargeValueCO >= 0){
+if (chargeValueCO > transacChargeCO){
+displayTotalCO = amountValueCO + (chargeValueCO - transacChargeCO );
+document.getElementById("totalCO").innerHTML= "Total: " + "Php " + displayTotalCO + ".00";
+}
+else {
 displayTotalCO = amountValueCO - Math.abs(transacChargeCO - chargeValueCO );
-document.getElementById("totalCO").innerHTML= "Total: " + displayTotalCO;
-}
-}
+document.getElementById("totalCO").innerHTML= "Total: " + "Php " + displayTotalCO + ".00";
+}}
+else if (amountValueCO === 0){
+document.getElementById("amountDisplay").innerHTML= "Amount: Input valid Amount * ";
+document.getElementById("totalCO").innerHTML= "Total: ";
+
+
+}}
+
 
 function validate(event) {
     const clickedBox = event.target;
@@ -62,6 +77,8 @@ function validate(event) {
        
     }
 }
+
+//confirm details final//
 
     
 

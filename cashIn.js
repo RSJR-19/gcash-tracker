@@ -11,6 +11,7 @@ function amount() {
  amountCI = parseFloat(document.getElementById("amountSend").value);
  charge = Math.ceil(amountCI/ 500)*5;
  document.getElementById("amountCI").innerHTML="Amount paid: " + "Php " + amountCI + ".00 " +"( " + charge + " Charge)";
+ document.getElementById("paymentRcvd").focus();
  
 }
 
