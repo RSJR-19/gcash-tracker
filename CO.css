@@ -32,6 +32,7 @@ padding: 15px;
 }
 
 #backButton button {
+font-weight: bold;
 font-style: Arial;
 padding: 10px;
 border-radius: 10px;
@@ -104,14 +105,6 @@ border-radius: 12px;
 border: solid black;
 }
 
-#clearCO {
-background-color: red;
-font-weight: bold;
-border: black solid;
-border-radius: 12px;
-padding: 2px 20px;
-box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
-}
 
 #cashOutBox button:active{
 box-shadow: none;
@@ -121,10 +114,11 @@ p {
 font-weight: bold;
 }
 
-#confirmCO {
-
+#confirmDetailsCO {
+font-weight: bold;
 padding: 12px 30px;
 border: solid black;
 border-radius: 12px;
 background-color: gray;
+box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
 }
