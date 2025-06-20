@@ -2,6 +2,7 @@ let amountValueCO = "0";
 let chargeValueCO = "";
 let displayTotalCO = "";
 let checkerCO = 0; // if 0 wala if 1 rnee if 2 liza //
+document.getElementById("totalCO").style.textAlign = "justify";
 
 
 
@@ -13,6 +14,7 @@ document.getElementById("amountDisplay").innerHTML = "Amount: " + "Php " + amoun
 document.getElementById("chargeInputCO").focus();
 computeTotalCO();
 confirmCO ();
+document.getElementById("totalCO").style.textAlign = "justify";
 }
 
 document.getElementById("amountInputCO").addEventListener("keydown", function(event)  {
@@ -63,6 +65,7 @@ function validate(event) {
             document.getElementById("lizaLabel").style.fontWeight = "normal";
             checkerCO = 1;
             confirmCO();
+            amountCO();
 
         }
         else if (clickedBox === lizaAccCO && lizaAccCO.checked) {
@@ -71,6 +74,7 @@ function validate(event) {
             document.getElementById("rneeLabel").style.fontWeight= "normal";
             checkerCO = 2;
             confirmCO();
+            amountCO();
         
         }
     else {
@@ -94,8 +98,19 @@ function confirmCO() {
     }}
 
     
+function confirmTransacCO() {
+    if (document.getElementById("confirmDetailsCO").style.backgroundColor === "yellow") {
+        document.getElementById("overlayCO").style.display = "flex";
+    }
+    else {
+        document.getElementById("totalCO").innerHTML = "Make sure the transaction is valid before confirming.";
+        document.getElementById("totalCO").style.textAlign = "center";
+    }
 
 
+}
+
+//to do tomorrow: overlay display nice game bro"//
 
 
 
