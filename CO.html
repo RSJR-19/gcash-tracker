@@ -15,9 +15,9 @@ initial-scale=1.0">
        <div id="boxWrapper">
         <div id="cashOutBox">
             <p>Sent to Which Account:</p>
-            <label id="rneeLabel"> <input type="checkbox" onclick="validate()" id="rneeCO">Rnee S.</label>
-            <label id="lizaLabel"> <input type="checkbox" onclick="validate()" id="lizaCO">Liza S.</label>
-            <button id="clearCO" onclick="clearCheck()">Clear</button>
+            <label id="rneeLabel"> <input type="checkbox" onclick="validate(event)" id="rneeCO">Rnee S.</label>
+            <label id="lizaLabel"> <input type="checkbox" onclick="validate(event)" id="lizaCO">Liza S.</label>
+            
             <p> Amount:</p>
             <input type="number" placeholder="Type Amount..." id="amountInputCO" autocomplete="off">
             <button onclick="amountCO()" id="amountCSS"> Enter</button>
