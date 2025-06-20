@@ -88,7 +88,7 @@ border: solid black ;
 border-radius: 12px;
 }
 
-#cashOutBox button {
+#chargeCSS, #amountCSS {
 box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
 background-color: yellow;
 font-family: Arial;
@@ -98,6 +98,15 @@ border-radius: 12px;
 border: solid black;
 }
 
+#clearCO {
+background-color: red;
+font-weight: bold;
+border: black solid;
+border-radius: 12px;
+padding: 2px 20px;
+box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
+}
+
 #cashOutBox button:active{
 box-shadow: none;
 }
@@ -105,3 +114,4 @@ box-shadow: none;
 p {
 font-weight: bold;
 }
+

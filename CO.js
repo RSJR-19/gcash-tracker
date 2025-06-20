@@ -1,6 +1,11 @@
 let amountValueCO = "";
 let chargeValueCO = "";
 let displayTotalCO = "";
+let rneeAccCO = document.getElementById("rneeCO");
+let lizaAccCO = document.getElementById("lizaCO");
+let checkerCO = 0; // if 0 wala if 1 rnee if 2 liza //
+let clearButton = document.getElementById("clearCO");
+clearButton.style.display = "none";
 
 
 
@@ -31,3 +36,45 @@ displayTotalCO = amountValueCO - Math.abs(transacChargeCO - chargeValueCO );
 document.getElementById("totalCO").innerHTML= "Total: " + displayTotalCO;
 }
 }
+
+
+
+
+function clearCheck() {
+clearButton.style.display = "none";
+rneeAccCO.checked = false;
+lizaAccCO.checked = false;
+checkerCO = 0;
+
+
+validate()
+}
+
+function validate() {
+    if (rneeAccCO.checked || lizaAccCO.checked ){
+        if (rneeAccCO.checked) {
+            clearButton.style.display = "inline";
+            document.getElementById("lizaLabel").style.display = "none";
+            checkerCO = 1;
+        }
+        else if (lizaAccCO.checked) {
+             clearButton.style.display = "inline";
+            document.getElementById("rneeLabel").style.display = "none";
+            checkerCO = 2;
+        
+        }}
+    else {
+        document.getElementById("rneeLabel").style.display = "inline";
+        document.getElementById("lizaLabel").style.display = "inline";
+        clearButton.style.display = "none";
+        checkerCO = 0;
+    }}
+
+
+    
+
+
+
+
+
+
