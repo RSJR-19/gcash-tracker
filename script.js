@@ -2,6 +2,7 @@
 document.getElementById("trackTransaction").style.display ="flex";
 document.getElementById("overlayTransac").style.display ="none"; //change this to "none" later //
 document.getElementById("overlayCopyBox").style.display="none";
+let emptyLogs = 0; // 0 kapag di pa tapos transac , 1 kapag done na transac //
 
 document.getElementById("dropdownBtn").addEventListener("click", menu);
 
@@ -87,11 +88,45 @@ autoResetLogs();
 function confirmCopy() {
     const today = new Date().toDateString();
     document.getElementById("overlayCopyBox").style.display="flex";
+    document.getElementById("confirmCopyLogsBtn").style.display="inline-flex";
     document.getElementById("confirmDate").innerHTML = " Note : Upon confirming to copy all logged transactions for today " + "(" + today + ")" + " they will be removed from the transaction history.";
 
 }
 
 function backTransac() {
-    document.getElementById("overlayCopyBox").style.display="none";
+    if (emptyLogs === 0){
+        document.getElementById("overlayCopyBox").style.display="none";
+    }
+    else {
+        document.getElementById("overlayTransac").style.display="none";
+        document.getElementById("overlayCopyBox").style.display="none";
+        emptyLogs = 0;
+        document.getElementById("confirmTitle").innerHTML = "Confirm copy";
+        document.getElementById("confirmDate").innerHTML = " Note : Upon confirming to copy all logged transactions for today " + "(" + today + ")" + " they will be removed from the transaction history.";
+        document.getElementById("confirmCopyLogsBtn").style.display = "flex";
+
+    }
 
 }
+
+function confirmCopyLogs () {
+    const loggedList = document.querySelectorAll("#transactionHistory li");
+    let textToCopy = '';
+
+    loggedList.forEach((li, index) => {
+        textToCopy +=`> ${li.textContent}\n\n`;
+    });
+
+    navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+        document.getElementById("confirmTitle").innerHTML = "Success!";
+        document.getElementById("confirmDate").innerHTML = "Transaction History copied to clipboard successfully.";
+        document.getElementById("confirmCopyLogsBtn").style.display = "none";
+        emptyLogs = 1;
+    })
+    .catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
+
+//to do monday: clear logs upon confirming and .catch message nice week bro//

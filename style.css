@@ -234,3 +234,8 @@ box-shadow: rgba(0, 0, 0, 0.248) 0px 5px; ;
     box-shadow: none;
     opacity: 0.9;
 }
+
+#confirmCopyLogsBtn {
+display: none; /*change to inline flex*/
+
+}

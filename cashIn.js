@@ -80,10 +80,10 @@ document.getElementById("confirmCI").style.backgroundColor = "gray";
 
  function confirm() {
 if (checker === 1){
-let displayTime = new Date ();
+let displayTime = new Date().toLocaleTimeString();
 document.getElementById("overlayCI").style.display="flex";
 document.getElementById("detailsCI").innerHTML= "CI: " + amountCI + " / " + paymentCI + " = " + (paymentCI - toPay);
-document.getElementById("dateCI").innerHTML= "(Date: " + displayTime.toLocaleString() + ")";
+document.getElementById("dateCI").innerHTML= "(" + displayTime.toLocaleString() + ")";
 let logDetailsCI = document.getElementById("detailsCI").innerText;
 let logDateCI = document.getElementById("dateCI").innerText;
 let totalLogCI = logDetailsCI + " " +  logDateCI;
