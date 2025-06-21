@@ -146,9 +146,9 @@ margin-top: 7px;
 background-color: rgb(141, 173, 184);
 border-radius: 10px;
 border: solid black;
-
-
-
+overflow-y: auto;
+padding: 10px;
+box-sizing: border-box;
 }
 
 #bot {

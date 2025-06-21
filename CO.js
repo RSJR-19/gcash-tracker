@@ -90,11 +90,15 @@ function validate(event) {
 //confirm details final//
 
 function confirmCO() {
-    if ((checkerCO === 1 || checkerCO === 2) && amountValueCO > 0){
+    if ((checkerCO === 1 || checkerCO === 2) && (amountValueCO - transacChargeCO > 0)){
         document.getElementById("confirmDetailsCO").style.backgroundColor = "yellow";
+    }
+    else if (amountValueCO - transacChargeCO <= 0 ) {
+        document.getElementById("confirmDetailsCO").style.backgroundColor = "gray";
     }
     else {
         document.getElementById("confirmDetailsCO").style.backgroundColor = "gray";
+        checkerCO = 0;
     }}
 
     
@@ -136,6 +140,7 @@ function confirmTransacCO() {
 
 
 document.getElementById("detailsCO").style.textAlign = "center";
+
 
 
 
