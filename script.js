@@ -85,7 +85,9 @@ logs.forEach(log => {
 autoResetLogs();
 
 function confirmCopy() {
+    const today = new Date().toDateString();
     document.getElementById("overlayCopyBox").style.display="flex";
+    document.getElementById("confirmDate").innerHTML = " Note : Upon confirming to copy all logged transactions for today " + "(" + today + ")" + " they will be removed from the transaction history.";
 
 }
 
