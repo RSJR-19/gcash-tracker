@@ -1,6 +1,7 @@
 
 document.getElementById("trackTransaction").style.display ="flex";
 document.getElementById("overlayTransac").style.display ="none"; //change this to "none" later //
+document.getElementById("overlayCopyBox").style.display="none";
 
 document.getElementById("dropdownBtn").addEventListener("click", menu);
 
@@ -82,3 +83,13 @@ logs.forEach(log => {
  }
 
 autoResetLogs();
+
+function confirmCopy() {
+    document.getElementById("overlayCopyBox").style.display="flex";
+
+}
+
+function backTransac() {
+    document.getElementById("overlayCopyBox").style.display="none";
+
+}
