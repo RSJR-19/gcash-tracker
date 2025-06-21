@@ -100,7 +100,31 @@ function confirmCO() {
     
 function confirmTransacCO() {
     if (document.getElementById("confirmDetailsCO").style.backgroundColor === "yellow") {
+       const displayTimeCO = new Date();
+       const accountUsed = (checkerCO === 1 ? " R ": (checkerCO === 2 ? " L " : " " ));
         document.getElementById("overlayCO").style.display = "flex";
+        if (chargeValueCO > 0) {
+    document.getElementById("detailsCO").innerHTML = "CO:" + accountUsed + amountValueCO + " = " + displayTotalCO + "<br>(Nagbigay " + chargeValueCO + ")";
+    document.getElementById("dateCO").innerHTML = "(Date: " + displayTimeCO.toLocaleString() + ")";
+    let logDetailsCO = document.getElementById("detailsCO").innerText;
+    let logDateCO = document.getElementById("dateCO").innerText;
+    let totalLogCO = logDetailsCO + " " + logDateCO;
+
+    let existingLogs = JSON.parse(localStorage.getItem("transactionLogs")) || [];
+    existingLogs.push(totalLogCO);
+    localStorage.setItem("transactionLogs",JSON.stringify(existingLogs));
+    }
+    else{
+    document.getElementById("detailsCO").innerText = "CO:" + accountUsed + amountValueCO + " = " + displayTotalCO;
+    document.getElementById("dateCO").innerHTML = "(Date: " + displayTimeCO.toLocaleString() + ")";
+    let logDetailsCO = document.getElementById("detailsCO").innerText;
+    let logDateCO = document.getElementById("dateCO").innerText;
+    let totalLogCO = logDetailsCO + " " + logDateCO;
+
+    let existingLogs = JSON.parse(localStorage.getItem("transactionLogs")) || [];
+    existingLogs.push(totalLogCO);
+    localStorage.setItem("transactionLogs",JSON.stringify(existingLogs));
+    }
     }
     else {
         document.getElementById("totalCO").innerHTML = "Make sure the transaction is valid before confirming.";
@@ -110,7 +134,8 @@ function confirmTransacCO() {
 
 }
 
-//to do tomorrow: overlay display nice game bro"//
+
+document.getElementById("detailsCO").style.textAlign = "center";
 
 
 
