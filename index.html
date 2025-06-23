@@ -30,14 +30,14 @@ initial-scale=1.0">
             <ul id="transactionHistory"></ul>
         
             <div id="exitTransac">
-                <button onclick="confirmCopy()" id="copyLogsBtn"> Copy all logs</button>
+                <button onclick="confirmCopyLogs()" id="copyLogsBtn"> Copy all logs</button>
                 <button onclick="window.location.href='index.html'"> < Back to Main menu</button>
                 
             </div>
             <div id="overlayCopyBox">
                 <div id="overlayCopy">
-                    <h2 id="confirmTitle">Confirm copy</h2>
-                    <p id="confirmDate">Note : Upon confirming to copy all logged transactions for today , they will be removed from the transaction history. </p>
+                    <h2 id="confirmTitle">Success!</h2>
+                    <p id="confirmDate">Transaction History copied to clipboard successfully. </p>
                     <div id="confirmButtons">
                         <button onclick="confirmCopyLogs()" id="confirmCopyLogsBtn"> Confirm</button>
                     <button onclick="backTransac()"> Back</button>
