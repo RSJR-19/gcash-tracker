@@ -1,216 +1,204 @@
 body {
-background-color: blue;
+  background-color: blue;
 }
 
 body {
-    height: 100vh;
-    margin: 0;
-    background-color: blue; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  height: 100vh;
+  margin: 0;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main {
-width: 400px;
-height: 500px;
-background-color: lightblue;
-border: solid black;
-border-radius: 5px;
-display: block;
-position: relative;
-
+  width: 400px;
+  height: 500px;
+  background-color: lightblue;
+  border: solid black;
+  border-radius: 5px;
+  display: block;
+  position: relative;
 }
 
 #backButton {
-display: flex;
-justify-content: flex-start;
-margin: 0;
-padding: 15px;
-
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 15px;
 }
 
 #backButton button {
-font-weight: bold;
-font-style: Arial;
-padding: 10px;
-border-radius: 10px;
-border-style: solid;
-background-color: white;
+  font-weight: bold;
+  font-style: Arial;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: white;
 }
 
 #Title {
-
-margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
 
 #Title h1 {
-margin: 0 0 0 25px;
-font-size: 40px;
-font-family: Arial;
+  margin: 0 0 0 25px;
+  font-size: 40px;
+  font-family: Arial;
 }
 
 #boxWrapper {
-
-width: 100%;
-height: 300px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 20px;
-
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 #cashOutBox {
-width: 370px;
-height: 270px;
-border-radius: 15px;
-background-color: rgb(141, 173, 184);
-border: solid black;
-display: inline;
+  width: 370px;
+  height: 270px;
+  border-radius: 15px;
+  background-color: rgb(141, 173, 184);
+  border: solid black;
+  display: inline;
 }
 
 #cashOutBox p {
-margin: 10px 10px 10px 13px;
-font-family: Arial;
+  margin: 10px 10px 10px 13px;
+  font-family: Arial;
 }
 
 #totalCO {
-color: red;
+  color: red;
 }
 
 #cashOutBox label {
-font-family: Arial;
-font-size: small;
-margin: 0 15px 0 15px;
+  font-family: Arial;
+  font-size: small;
+  margin: 0 15px 0 15px;
 }
 
 #cashOutBox input {
-margin: 0 5px 0 10px;
-padding: 10px;
-border: solid black ;
-border-radius: 12px;
+  margin: 0 5px 0 10px;
+  padding: 10px;
+  border: solid black;
+  border-radius: 12px;
 }
 
-#chargeCSS, #amountCSS {
-box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
-background-color: yellow;
-font-family: Arial;
-font-weight: bold;
-padding: 10px 20px;
-border-radius: 12px;
-border: solid black;
+#chargeCSS,
+#amountCSS {
+  box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
+  background-color: yellow;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: solid black;
 }
 
-
-#cashOutBox button:active{
-box-shadow: none;
+#cashOutBox button:active {
+  box-shadow: none;
 }
 
 p {
-font-weight: bold;
+  font-weight: bold;
 }
 
 #confirmDetailsCO {
-font-weight: bold;
-padding: 12px 30px;
-border: solid black;
-border-radius: 12px;
-background-color: gray;
-box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: solid black;
+  border-radius: 12px;
+  background-color: gray;
+  box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
 }
 
 #overlayCO {
-position: absolute;
-top: 0;
-left: 0;
-width: 400px;
-height: 500px;
-background-color: lightblue;
-border-radius: 5px;
-display: none; /*change to none */
-z-index: 10;
-justify-content: flex-start;
-flex-direction: column;
-align-items: center;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 500px;
+  background-color: lightblue;
+  border-radius: 5px;
+  display: none; /*change to none */
+  z-index: 10;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
 
 #displayOverlay {
-width: 95%;
-height: 80%;
-margin-top: 7px;
-background-color: rgb(141, 173, 184);
-border-radius: 10px;
-border: solid black;
-overflow-y: auto;
-padding: 10px;
-box-sizing: border-box;
+  width: 95%;
+  height: 80%;
+  margin-top: 7px;
+  background-color: rgb(141, 173, 184);
+  border-radius: 10px;
+  border: solid black;
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #bot {
-display: flex;
-height: 100px;
-width: 100%;
-justify-content: center;
-align-items: flex-start;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #bot button {
-padding: 12px 30px;
-border: solid black;
-border-radius: 15px;
-margin: 20px;
-background-color: yellow;
-font-weight: bold;
-box-shadow:rgba(0, 0, 0, 0.248) 0px 4px; ;
+  padding: 12px 30px;
+  border: solid black;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: yellow;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
 }
 
 #detailsA {
-width: 100%;
-height: 50%;
-border-radius: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #detailsA h1 {
-font-family: Arial;
+  font-family: Arial;
 }
 
 #detailsB {
-width: 100%;
-height: 50%;
-border-radius: 10px;
-display: flex;
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  display: flex;
 
-flex-direction: column;
-align-items: center;
-
-
+  flex-direction: column;
+  align-items: center;
 }
 
 #detailsB h1 {
-font-family: Arial;
-margin-bottom: 0px;
+  font-family: Arial;
+  margin-bottom: 0px;
 }
 
 #detailsB p {
-font-family: Arial;
+  font-family: Arial;
 }
 
 #detailsCO {
-color: red;
--webkit-text-stroke: black 1.5px;
-text-align: left;
-white-space: pre-wrap;
-word-wrap: break-word;
-padding: 10px;
-width: 90%;
+  color: red;
+  -webkit-text-stroke: black 1.5px;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 10px;
+  width: 90%;
 }

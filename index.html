@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width,
-initial-scale=1.0">
-<title>GCASH tracker</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>GCASH tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="main">
-        <div id="title">
+      <div id="title">
         <h1>GCASH</h1>
         <h3>Tracker</h3>
-        </div>
-        <div id="dropdown">
-            <button id="dropdownBtn" onclick="hideTransac()"> Select Transaction</button>
-            <button id= "trackTransaction" onclick="transac()"> Track Transaction</button>
-        </div>
-        <div id="containerMenu" style="display: none;">
-            <button onclick="window.location.href='cashIn.html'">Cash In</button>
-            <button onclick="window.location.href='CO.html'">Cash Out</button>
-            <button>Payment</button>
-            <button>Exhange Fund</button>
-        </div>
-        <div id="overlayTransac">
-            <p id="dateTransac"> Transaction as of </p>
-            <ul id="transactionHistory"></ul>
-        
-            <div id="exitTransac">
-                <button onclick="confirmCopyLogs()" id="copyLogsBtn"> Copy all logs</button>
-                <button onclick="window.location.href='index.html'"> < Back to Main menu</button>
-                
-            </div>
-            <div id="overlayCopyBox">
-                <div id="overlayCopy">
-                    <h2 id="confirmTitle">Success!</h2>
-                    <p id="confirmDate">Transaction History copied to clipboard successfully. </p>
-                    <div id="confirmButtons">
-                        <button onclick="confirmCopyLogs()" id="confirmCopyLogsBtn"> Confirm</button>
-                    <button onclick="backTransac()"> Back</button>
-                    </div>
-                
-                </div>
-            </div>
+      </div>
+      <div id="dropdown">
+        <button id="dropdownBtn" onclick="hideTransac()">
+          Select Transaction
+        </button>
+        <button id="trackTransaction" onclick="transac()">
+          Track Transaction
+        </button>
+      </div>
+      <div id="containerMenu" style="display: none">
+        <button onclick="window.location.href='cashIn.html'">Cash In</button>
+        <button onclick="window.location.href='CO.html'">Cash Out</button>
+        <button>Payment</button>
+        <button>Exhange Fund</button>
+      </div>
+      <div id="overlayTransac">
+        <p id="dateTransac">Transaction as of</p>
+        <ul id="transactionHistory"></ul>
 
+        <div id="exitTransac">
+          <button onclick="confirmCopyLogs()" id="copyLogsBtn">
+            Copy all logs
+          </button>
+          <button onclick="window.location.href='index.html'">
+            < Back to Main menu
+          </button>
         </div>
-
+        <div id="overlayCopyBox">
+          <div id="overlayCopy">
+            <h2 id="confirmTitle">Copying...</h2>
+            <p id="confirmDate">Processing transaction logs... please wait.</p>
+            <div id="confirmButtons">
+              <button onclick="confirmCopyLogs()" id="confirmCopyLogsBtn">
+                Confirm
+              </button>
+              <button onclick="backTransac()">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
-
-
