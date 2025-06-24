@@ -23,14 +23,14 @@ initial-scale=1.0"
       <div id="payment-Box-Wrapper">
         <div id="payment-Box">
           <div class="input-field">
-            <p>Paid amount:</p>
+            <p id="paid-amount">Paid amount:</p>
             <input
               type="number"
               placeholder="Type amount paid..."
               autocomplete="off"
               id="amountP"
             />
-            <button>Enter</button>
+            <button onclick="paymentEnter()">Enter</button>
           </div>
           <div class="input-field">
             <p>Purpose:</p>
@@ -38,15 +38,15 @@ initial-scale=1.0"
               type="text"
               placeholder="Input Payment purpose..."
               maxlength="20"
+              autocomplete="off"
               id="purposeP"
             />
-            <button>Enter</button>
+            <button onclick="purposeEnter()">Enter</button>
           </div>
-          <div class="total-field"><p>Total:</p></div>
+          <div class="total-field"><p id="totalP">Total:</p></div>
         </div>
       </div>
     </div>
     <script src="payment.js"></script>
   </body>
 </html>
-
