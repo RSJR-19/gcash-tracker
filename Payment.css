@@ -1,0 +1,118 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  width: 400px;
+  height: 500px;
+  background-color: lightblue;
+  border: solid black;
+  border-radius: 5px;
+  display: flex;
+flex-direction: column;
+
+  position: relative;
+}
+
+#backButton {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 15px;
+}
+
+#backButton button {
+  font-weight: bold;
+  font-style: Arial;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: white;
+}
+
+#Title {
+  margin-bottom: 0px;
+}
+
+#Title h1 {
+  margin: 0 0 0 25px;
+  font-size: 40px;
+  font-family: Arial;
+}
+
+#payment-Box-Wrapper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+#payment-Box {
+  width: 370px;
+  height: 270px;
+  border-radius: 15px;
+  background-color: rgb(141, 173, 184);
+  border: solid black;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  margin: 0;
+  
+ 
+}
+.input-field{
+    display: inline;
+    font-size: larger;
+    
+    
+}
+
+.total-field{
+display: flex;
+
+align-items: flex-start;
+
+height: 100%;
+align-items: center;
+color: red;
+}
+
+
+
+#payment-Box p {
+  margin: 10px 10px 10px 13px;
+  font-family: Arial;
+}
+
+#payment-Box input {
+  margin: 0 5px 0 10px;
+  padding: 10px;
+  border: solid black;
+  border-radius: 12px;
+}
+
+
+
+ button {
+  box-shadow: rgba(0, 0, 0, 0.248) 0px 4px;
+  background-color: yellow;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: solid black;
+}
+
+button:active {
+  box-shadow: none;
+}
+

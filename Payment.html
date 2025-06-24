@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>GCASH tracker</title>
+    <link rel="stylesheet" href="payment.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="backButton">
+        <button onclick="window.location.href= 'index.html'">
+          < Back to main menu
+        </button>
+      </div>
+      <div id="Title">
+        <h1>Payment:</h1>
+      </div>
+      <div id="payment-Box-Wrapper">
+        <div id="payment-Box">
+          <div class="input-field">
+            <p>Paid amount:</p>
+            <input
+              type="number"
+              placeholder="Type amount paid..."
+              autocomplete="off"
+              id="amountP"
+            />
+            <button>Enter</button>
+          </div>
+          <div class="input-field">
+            <p>Purpose:</p>
+            <input
+              type="text"
+              placeholder="Input Payment purpose..."
+              maxlength="20"
+              id="purposeP"
+            />
+            <button>Enter</button>
+          </div>
+          <div class="total-field"><p>Total:</p></div>
+        </div>
+      </div>
+    </div>
+    <script src="payment.js"></script>
+  </body>
+</html>
+

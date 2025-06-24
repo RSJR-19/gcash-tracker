@@ -1,7 +1,7 @@
 document.getElementById("trackTransaction").style.display = "flex";
 document.getElementById("overlayTransac").style.display = "none"; //change this to "none" later //
 document.getElementById("overlayCopyBox").style.display = "none";
-let emptyLogs = 0; // 0 kapag di pa tapos transac , 1 kapag done na transac //
+
 
 document.getElementById("dropdownBtn").addEventListener("click", menu);
 
@@ -30,7 +30,7 @@ function menu() {
 }
 
 function hideTransac() {
-  displayTransac = document.getElementById("trackTransaction").style.display;
+ let displayTransac = document.getElementById("trackTransaction").style.display;
   if (displayTransac === "flex") {
     document.getElementById("trackTransaction").style.display = "none";
   } else if (displayTransac === "none") {
@@ -40,7 +40,7 @@ function hideTransac() {
 
 function transac() {
   const logs = getLogs();
-  overlayTransac = document.getElementById("overlayTransac");
+  let overlayTransac = document.getElementById("overlayTransac");
   if (overlayTransac.style.display === "flex") {
     overlayTransac.style.display = "none";
   } else {
@@ -85,33 +85,33 @@ function backTransac() {
 }
 
 function confirmCopyLogs() {
-    if (document.getElementById("copyLogsBtn").style.backgroundColor === "yellow"){
-        document.getElementById("overlayCopyBox").style.display = "flex";
-  const loggedList = document.querySelectorAll("#transactionHistory li");
-  let textToCopy = "";
+  if (
+    document.getElementById("copyLogsBtn").style.backgroundColor === "yellow"
+  ) {
+    document.getElementById("overlayCopyBox").style.display = "flex";
+    const loggedList = document.querySelectorAll("#transactionHistory li");
+    let textToCopy = "";
 
-  loggedList.forEach((li, index) => {
-    textToCopy += `> ${li.textContent}\n\n`;
-  });
-
-  navigator.clipboard
-    .writeText(textToCopy)
-    .then(() => {
-      document.getElementById("confirmTitle").innerHTML = "Success!";
-      document.getElementById("confirmDate").innerHTML =
-        "Transaction History copied to clipboard successfully.";
-    })
-    .catch((err) => {
-      console.error("Failed to copy: ", err);
+    loggedList.forEach((li, index) => {
+      textToCopy += `> ${li.textContent}\n\n`;
     });
 
-}
-else {
-document.getElementById("overlayCopyBox").style.display = "flex";
-document.getElementById("confirmTitle").innerHTML = "Notice: ";
-document.getElementById("confirmDate").innerHTML = "Transaction List is empty."
-}
-  
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        document.getElementById("confirmTitle").innerHTML = "Success!";
+        document.getElementById("confirmDate").innerHTML =
+          "Transaction History copied to clipboard successfully.";
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  } else {
+    document.getElementById("overlayCopyBox").style.display = "flex";
+    document.getElementById("confirmTitle").innerHTML = "Notice: ";
+    document.getElementById("confirmDate").innerHTML =
+      "Transaction List is empty.";
+  }
 }
 
 //to do monday: clear logs upon confirming and .catch message nice week bro//
