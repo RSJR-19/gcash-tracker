@@ -33,18 +33,25 @@ initial-scale=1.0"
             <button onclick="paymentEnter()">Enter</button>
           </div>
           <div class="input-field">
-            <p>Purpose:</p>
+            <p id="purpose-status">Purpose:</p>
             <input
               type="text"
               placeholder="Input Payment purpose..."
               maxlength="20"
               autocomplete="off"
+              autocorrect="off"
               id="purposeP"
             />
             <button onclick="purposeEnter()">Enter</button>
           </div>
           <div class="total-field"><p id="totalP">Total:</p></div>
         </div>
+      </div>
+      <div class="confirm-container">
+        <button id="confirm-P" onclick="overlayP()">Confirm details</button>
+      </div>
+      <div id="overlay-P">
+
       </div>
     </div>
     <script src="payment.js"></script>
