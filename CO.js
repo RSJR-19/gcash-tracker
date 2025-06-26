@@ -5,16 +5,9 @@ let checkerCO = "void"; // if void wala  //
 document.getElementById("totalCO").style.textAlign = "justify";
 
 function amountCO() {
-  amountValueCO = Number(document.getElementById("amountInputCO").value);
+  amountValueCO = parseFloat(document.getElementById("amountInputCO").value);
   let transacChargeCO = Math.ceil(amountValueCO / 500) * 5;
-  document.getElementById("amountDisplay").innerHTML =
-    "Amount: " +
-    "Php " +
-    amountValueCO +
-    ".00" +
-    " ( " +
-    transacChargeCO +
-    " Charge)";
+  document.getElementById("amountDisplay").innerHTML = ` Amount: Php ${amountValueCO.toFixed(2)} (${transacChargeCO} Charge)`;
   document.getElementById("chargeInputCO").focus();
   computeTotalCO();
   confirmCO();
@@ -115,17 +108,11 @@ function confirmTransacCO() {
     const accountUsed = checkerCO === "rnee" ? " R " : checkerCO === "liza" ? " L " : " ";
     document.getElementById("overlayCO").style.display = "flex";
     if (chargeValueCO > 0) {
-      document.getElementById("detailsCO").innerHTML =
-        "CO:" +
-        accountUsed +
-        amountValueCO +
-        " = " +
-        displayTotalCO +
-        "<br>(Nagbigay " +
-        chargeValueCO +
-        ")";
+      document.getElementById("detailsCO").innerHTML = `CO: ${accountUsed} ${amountValueCO} = ${displayTotalCO} \n(Nagbigay ${chargeValueCO})`;
+
+
       document.getElementById("dateCO").innerHTML =
-        "(" + displayTimeCO.toLocaleString() + ")";
+       `(${displayTimeCO})`;
       let logDetailsCO = document.getElementById("detailsCO").innerText;
       let logDateCO = document.getElementById("dateCO").innerText;
       let totalLogCO = logDetailsCO + " " + logDateCO;
@@ -136,9 +123,10 @@ function confirmTransacCO() {
       localStorage.setItem("transactionLogs", JSON.stringify(existingLogs));
     } else {
       document.getElementById("detailsCO").innerText =
-        "CO:" + accountUsed + amountValueCO + " = " + displayTotalCO;
+        //"CO:" + accountUsed + amountValueCO + " = " + displayTotalCO;//
+        `CO: ${accountUsed} ${amountValueCO} = ${displayTotalCO}`;
       document.getElementById("dateCO").innerHTML =
-        "(" + displayTimeCO.toLocaleString() + ")";
+        `(${displayTimeCO})`;
       let logDetailsCO = document.getElementById("detailsCO").innerText;
       let logDateCO = document.getElementById("dateCO").innerText;
       let totalLogCO = logDetailsCO + " " + logDateCO;

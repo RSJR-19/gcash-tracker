@@ -4,6 +4,8 @@ let displayPaidAmount = document.getElementById("paid-amount");
 let displayTotal = document.getElementById("totalP");
 let getConfirmButton = document.getElementById("confirm-P");
 let getOverlayPayment = document.getElementById("overlay-P");
+let getTransactionDetails = document.getElementById("transaction-details-P");
+let getDateId = document.getElementById("date-P");
 let isTherePayment = false;
 let isTherePurpose = false;
 displayTotal.style.textAlign = "justify";
@@ -31,7 +33,6 @@ function paymentEnter() {
   displayPaidAmount.style.color = "black";
   displayTotal.innerHTML = "Total: "
   displayTotal.style.textAlign = "justify";
-  console.log(displayPaidAmount);
   isTherePayment = true;
   if(isTherePurpose === true ? isAmountAndPurposeTrue(): paymentPurpose.focus());
 }
@@ -72,11 +73,7 @@ function purposeEnter() {
     isTherePurpose = false;
     isAmountAndPurposeTrue();
   }
-  
-  
-
-
-}//do later if isTherePayment == false //
+}
 
 document
   .getElementById("purposeP")
@@ -88,7 +85,12 @@ document
 
   function overlayP () {
 if(getConfirmButton.style.backgroundColor ==="yellow"){
-   getOverlayPayment.style.display = "flex" 
+   getOverlayPayment.style.display = "flex"
+   let displayTransactionDetail = getTransactionDetails.innerHTML = `P: ${paymentAmount.value} (${paymentPurpose.value})`;
+   let getCurrentTime = new Date().toLocaleTimeString();
+   let displayTime = getDateId.innerHTML = `(${getCurrentTime})`;
+   console.log(paymentTotal);
+   
  }
  else{
    displayTotal.innerHTML = "Make sure both inputs are filled in properly."
@@ -98,8 +100,9 @@ if(getConfirmButton.style.backgroundColor ==="yellow"){
      paymentAmount.focus();
    }
    else {
-    paymentEnter.focus()
+    paymentPurpose.focus();
    }
+   console.log(isTherePayment);
   }}
 
 

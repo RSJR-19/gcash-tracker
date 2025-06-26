@@ -185,9 +185,10 @@ p {
 
 #detailsB p {
   font-family: Arial;
+  font-weight: normal;
 }
 
 #detailsCI {
-  color: red;
-  -webkit-text-stroke: black 1.5px;
+  color: black;
+  
 }

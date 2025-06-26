@@ -179,8 +179,7 @@ p {
   height: 50%;
   border-radius: 10px;
   display: flex;
-
-  flex-direction: column;
+flex-direction: column;
   align-items: center;
 }
 
@@ -191,14 +190,11 @@ p {
 
 #detailsB p {
   font-family: Arial;
+  font-weight: normal;
 }
 
 #detailsCO {
-  color: red;
-  -webkit-text-stroke: black 1.5px;
-  text-align: left;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  padding: 10px;
-  width: 90%;
+  margin-top: 0;
+  color: black;
+ 
 }

@@ -9,7 +9,8 @@ function amount() {
   amountCI = parseFloat(document.getElementById("amountSend").value);
   charge = Math.ceil(amountCI / 500) * 5;
   document.getElementById("amountCI").innerHTML =
-    "Amount paid: " + "Php " + amountCI + ".00 " + "( " + charge + " Charge)";
+   // "Amount paid: " + "Php " + amountCI + ".00 " + "( " + charge + " Charge)";//
+    `Amount paid: Php ${amountCI.toFixed(2)} (${charge} Charge)`;
   document.getElementById("paymentRcvd").focus();
 }
 
@@ -24,8 +25,7 @@ document
 
 function payment() {
   paymentCI = parseFloat(document.getElementById("paymentRcvd").value);
-  document.getElementById("paymentCI").innerHTML =
-    "Payment given: " + "Php " + paymentCI + ".00";
+  document.getElementById("paymentCI").innerHTML =`Payment given: Php ${paymentCI.toFixed(2)}`;
 }
 
 document
