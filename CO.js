@@ -123,7 +123,6 @@ function confirmTransacCO() {
       localStorage.setItem("transactionLogs", JSON.stringify(existingLogs));
     } else {
       document.getElementById("detailsCO").innerText =
-        //"CO:" + accountUsed + amountValueCO + " = " + displayTotalCO;//
         `CO: ${accountUsed} ${amountValueCO} = ${displayTotalCO}`;
       document.getElementById("dateCO").innerHTML =
         `(${displayTimeCO})`;

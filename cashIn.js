@@ -9,7 +9,6 @@ function amount() {
   amountCI = parseFloat(document.getElementById("amountSend").value);
   charge = Math.ceil(amountCI / 500) * 5;
   document.getElementById("amountCI").innerHTML =
-   // "Amount paid: " + "Php " + amountCI + ".00 " + "( " + charge + " Charge)";//
     `Amount paid: Php ${amountCI.toFixed(2)} (${charge} Charge)`;
   document.getElementById("paymentRcvd").focus();
 }
@@ -52,7 +51,8 @@ function compute() {
       document.getElementById("confirmCI").style.backgroundColor = "gray";
       checker = false;
     } else {
-      changeCI = "Change: " + "Php " + (paymentCI - toPay) + ".00";
+      //changeCI = "Change: " + "Php " + (paymentCI - toPay) + ".00";//
+      changeCI = `Change: Php ${(paymentCI - toPay).toFixed(2)}`;
       document.getElementById("confirmCI").style.backgroundColor = "yellow";
       checker = true;
       document.getElementById("changeCI").style.textAlign = "justify";
