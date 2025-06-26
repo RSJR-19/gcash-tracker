@@ -89,7 +89,11 @@ if(getConfirmButton.style.backgroundColor ==="yellow"){
    let displayTransactionDetail = getTransactionDetails.innerHTML = `P: ${paymentAmount.value} (${paymentPurpose.value})`;
    let getCurrentTime = new Date().toLocaleTimeString();
    let displayTime = getDateId.innerHTML = `(${getCurrentTime})`;
-   console.log(paymentTotal);
+   let totalLogP = `${displayTransactionDetail} ${displayTime}`;
+   
+   let existingLogs = JSON.parse(localStorage.getItem("transactionLogs")) || [];
+   existingLogs.push(totalLogP);
+   localStorage.setItem("transactionLogs",JSON.stringify(existingLogs));
    
  }
  else{
